@@ -169,7 +169,7 @@ public:
 
     // Смена текущего игрока
     void switchPlayer() {
-        currentPlayer = (currentPlayer == "X") ? "O" : "X"; 
+        currentPlayer = (currentPlayer == "X") ? "O" : "X";
     }
 
     // Проверка корректности ввода игрока
@@ -203,7 +203,7 @@ public:
         cout << "Выберите, кто ходит первым (X или O): ";
         cin >> currentPlayer;
         checker(currentPlayer);
-        
+
         while (turns < board.size() * board.size()) {
             cout << "\033[2J" << "\033[H"; // Очистка экрана
             printBoard();
@@ -221,7 +221,7 @@ public:
                 turns++;
                 continue;
             }
- 
+
             // Ход игрока
             cout << "Игрок " << currentPlayer << ", введите строку и столбец (например, 1 1): ";
             cin >> row >> col;
